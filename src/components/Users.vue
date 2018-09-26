@@ -2,9 +2,9 @@
   <div class="users">
       <h2>这里是Users内容</h2>
       <ul>
-          <li v-for="user in users" v-on:click="user.show=!user.show">
+          <li v-for="user in users">
               <h4>{{user.name}}</h4>
-              <h3 v-show="user.show">{{user.position}}</h3>
+              <h3>{{user.email}}</h3>
           </li>
       </ul>
       <button v-on:click='deletUser'>删除</button>
@@ -18,11 +18,11 @@ export default {
       users:{
           type:Array,
           required:true
-      }
+      },
   },
   data () {
     return {
-        
+       
     }
   },
   methods:{
